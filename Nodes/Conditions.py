@@ -53,7 +53,7 @@ class SensedDusty(Condition):
 
     @staticmethod
     def sensed_dusty(agent):
-        if random.randint(1, 3) == 1:
+        if random.randint(1, 2) == 1:
             return True
         return False
 

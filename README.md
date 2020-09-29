@@ -8,6 +8,8 @@ in which you downloaded the directory.
 are running python version 3, the program is not compatible with version 2.
 - Once you have navigated to the correct location and are in terminal
 run: python RumbaStart.py 
+- I recommend running the program in an IDE with an integrated terminal like Pycharm so it is easy to 
+view the files and the documentation while running it. 
 
 **2. Testing the Program**
 - The program can be tested by simply following the console print statements.
@@ -18,6 +20,9 @@ running time. They are simply added to allow debugging and testing to be
 easy.
 - By following the sequence through which the tasks are executed, how exactly
 the program follows the behaviour tree can be measured.
+- To do a basic testing run through execute every different
+command, and check if the console outputs follow the behaviour
+tree.
 
 **3. Design**
 - The tree is designed as a series of hierarchical nodes. 
