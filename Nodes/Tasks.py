@@ -74,10 +74,11 @@ class Done(Task):
         self.data_to_write = data_to_write
 
     def run(self, agent):
-        if self.run_helper(agent):
-            self.write_to_blackboard(agent, self.data_to_write, False)
-            return True
-        return False
+        self.start_task_message()
+        print("TASK SUCCEEDED")
+        self.write_to_blackboard(agent, self.data_to_write, False)
+        agent.print_debug()
+        return True
 
 
 class CleanSpot(Task):
@@ -87,7 +88,7 @@ class CleanSpot(Task):
 
 class Clean(Task):
     def __init__(self):
-        super().__init__(10, "GENERAL CLEANING")
+        super().__init__(10, "CLEAN")
 
 
 class DoneSpot(Done):

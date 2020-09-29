@@ -61,5 +61,5 @@ class Agent:
                 print("The battery is fully charged.")
                 return
 
-            self.blackboard["battery_level"] += 1
-            self.total_time += 1
+            self.blackboard["battery_level"] += 0.5
+            self.total_time += 0.5
