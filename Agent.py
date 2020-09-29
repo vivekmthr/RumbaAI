@@ -34,7 +34,8 @@ class Agent:
         PriorityNode().run(self)
 
     # Drains the battery
-    def battery_drain(self):        self.blackboard["battery_level"] = self.blackboard["battery_level"] - 0.5
+    def battery_drain(self):
+        self.blackboard["battery_level"] = self.blackboard["battery_level"] - 0.5
 
     # charges the battery
     def battery_charge(self):
