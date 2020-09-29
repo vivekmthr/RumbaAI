@@ -43,23 +43,8 @@ class Agent:
 
     # charges the battery
     def battery_charge(self):
-        print("THE RUMBA IS CHARGING")
-        while self.blackboard["battery_level"] < 100:
+        print("\nTHE RUMBA IS CHARGING")
+        output = input("Set the target charge for the rumba, ONLY TYPE NUMBERS, e.g 50: ")
+        self.blackboard["battery_level"] = int(output)
+        print("RUMBA HAS CHARGED TO " + output + "%")
 
-            if self.blackboard["battery_level"] == 31:
-                prompt = input(
-                    "The battery level is above 30.\nHowever, it is recommended waiting until the battery level is "
-                    "above 75.\nEnter 0 to stop charging or 1 to keep charging: ")
-                if int(prompt) == 0:
-                    return
-
-            if self.blackboard["battery_level"] == 76:
-                prompt = input("The battery level is above 75.\nEnter 0 to stop charging or 1 to keep charging: ")
-                if int(prompt) == 0:
-                    return
-            if self.blackboard["battery_level"] == 99:
-                print("The battery is fully charged.")
-                return
-
-            self.blackboard["battery_level"] += 0.5
-            self.total_time += 0.5
