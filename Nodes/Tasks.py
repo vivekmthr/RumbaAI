@@ -64,6 +64,7 @@ class Dock(Task):
     def run(self, agent):
         self.run_helper(agent)
         agent.battery_charge()
+        agent.reset_general()
         return True
 
 

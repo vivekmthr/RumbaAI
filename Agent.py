@@ -37,6 +37,10 @@ class Agent:
     def battery_drain(self):
         self.blackboard["battery_level"] = self.blackboard["battery_level"] - 0.5
 
+    def reset_general(self):
+        self.blackboard["general_requested"] = False
+        self.blackboard["spot_requested"] = False
+
     # charges the battery
     def battery_charge(self):
         print("THE RUMBA IS CHARGING")

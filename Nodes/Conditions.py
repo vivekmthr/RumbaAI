@@ -52,7 +52,7 @@ class SpotRequested(Condition):
 class SensedDusty(Condition):
 
     @staticmethod
-    def sensed_dusty():
+    def sensed_dusty(agent):
         if random.randint(1, 3) == 1:
             return True
         return False
